@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+
 import Header from "./Leafora/Header";
 import Footer from "./Leafora/Footer";
 
@@ -59,7 +60,8 @@ function App() {
     <BrowserRouter>
 
       <Header />
-
+      
+       
       <Switch>
 
         <Route exact path="/">

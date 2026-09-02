@@ -1,6 +1,6 @@
-
 import React from 'react';
 import { useHistory } from "react-router-dom";
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,7 +12,6 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import LocalFloristIcon from '@mui/icons-material/LocalFlorist';
-
 
 const Header = () => {
   const history = useHistory();
@@ -47,13 +46,18 @@ const Header = () => {
 
   return (
     <AppBar
-      position="static"
+      position="sticky"
       sx={{
+        top: 0,
         backgroundColor: '#0e200a',
         boxShadow: 'none',
+        border: 'none',
+        borderBottom: 'none',
         width: '100%',
+        zIndex: 1100,
       }}
     >
+
       <Container
         maxWidth="xl"
         sx={{
@@ -65,6 +69,7 @@ const Header = () => {
           },
         }}
       >
+
         <Toolbar
           disableGutters
           sx={{
@@ -99,6 +104,7 @@ const Header = () => {
               flexShrink: 0,
             }}
           >
+
             <LocalFloristIcon
               sx={{
                 fontSize: {
@@ -132,6 +138,7 @@ const Header = () => {
             >
               LEAFORA
             </Typography>
+
           </Box>
 
 
@@ -172,6 +179,7 @@ const Header = () => {
                 },
               }}
             >
+
               <MenuIcon
                 sx={{
                   fontSize: {
@@ -180,6 +188,7 @@ const Header = () => {
                   },
                 }}
               />
+
             </IconButton>
 
 
@@ -219,12 +228,12 @@ const Header = () => {
                 },
 
                 color: '#DCD6C4',
-
                 whiteSpace: 'nowrap',
               }}
             >
               LEAFORA
             </Typography>
+
           </Box>
 
 
@@ -288,6 +297,7 @@ const Header = () => {
                   },
                 }}
               >
+
                 <Typography
                   sx={{
                     fontSize: {
@@ -300,6 +310,7 @@ const Header = () => {
                 >
                   {page}
                 </Typography>
+
               </MenuItem>
             ))}
 
@@ -352,7 +363,6 @@ const Header = () => {
                       : '#E8D9C4',
 
                   display: 'block',
-
                   textTransform: 'none',
 
                   fontSize: {
@@ -362,9 +372,7 @@ const Header = () => {
                   },
 
                   fontWeight: 500,
-
                   position: 'relative',
-
                   whiteSpace: 'nowrap',
 
                   transition: 'all 0.3s ease',
@@ -380,9 +388,7 @@ const Header = () => {
                     content: '""',
 
                     position: 'absolute',
-
                     bottom: '5px',
-
                     left: '50%',
 
                     width:
@@ -405,9 +411,7 @@ const Header = () => {
                     content: "'🌿'",
 
                     position: 'absolute',
-
                     left: '-3px',
-
                     top: '50%',
 
                     fontSize: '10px',
@@ -445,11 +449,8 @@ const Header = () => {
           <Box
             sx={{
               flexGrow: 0,
-
               display: 'flex',
-
               alignItems: 'center',
-
               flexShrink: 0,
 
               ml: {
@@ -499,11 +500,9 @@ const Header = () => {
                 backgroundColor: '#0e200a',
 
                 border: '1px solid #1f4a38',
-
                 borderRadius: '6px',
 
                 textTransform: 'uppercase',
-
                 whiteSpace: 'nowrap',
 
                 transition: 'all 0.3s ease',
@@ -521,7 +520,9 @@ const Header = () => {
           </Box>
 
         </Toolbar>
+
       </Container>
+
     </AppBar>
   );
 };
